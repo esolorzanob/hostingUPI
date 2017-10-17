@@ -1,0 +1,36 @@
+Server Setup for AWS
+1. Crear una regla en security groups para habilitar la conexion de SSH 
+2. Crear una regla en security groups para habilitar la conexion a www
+3. Crear una regla en security groups para habilitar la conexion a SQL
+Apartir de aqui es en la consola del servidor
+4. Actualizar todo
+   sudo apt-get update
+5. Instalar apache
+   sudo apt-get install apache2
+6. Instalar MYSQL Server
+   sudo apt-get install mysql-server, recordar contraseña
+7. login en mysql para crear usuario global
+   mysql -u root -p
+   create user 'root'@'%' identified by '<password>';
+   grant all privileges on *.* to 'root'@'%';
+7.1 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+	buscar la linea que dice bind-address 127.0.0.0 y ponerle un # adelante
+	sudo /etc/init.d/mysql restart
+8. Instalar php
+   sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
+9. Definir dueño de carpeta de apache y permisos
+   sudo chown -R ubuntu /var/www/html
+   sudo chmod -R 755 /var/www/html
+10. Reiniciar el servidor de apache y mysql
+	sudo service apache2 restart
+	sudo /etc/init.d/mysql restart
+11. Probar el servidor, poner el ip en el buscador
+    Debe salir la pagina de Apache, it works
+12. Probar que el php sirva
+    sudo nano /var/www/html/info.php
+    <?php
+    phpinfo();
+    ?>
+    para salir ctrl-x, yes, enter
+ 	poner en el buscador el ip seguido de /info.php
+ 13. Poner a funcionar el FTP
