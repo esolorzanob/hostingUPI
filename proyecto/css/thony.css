@@ -1,0 +1,31 @@
+.formContainerPrincipal{
+  margin-left:  250px;
+  margin-right: 250px;
+  margin-top: 80px;
+  width: 600px;
+}
+
+.formContainerPrincipal h1{
+	font-size: 60px;
+	color: white;
+	background-color: blue;
+}
+
+.formContainerPrincipal label{
+	font-size: 50px;
+	color: blue;
+}
+
+.formContainerPrincipal input{
+	font-size: 40px;
+}
+
+.formContainerPrincipal button{
+	margin-top: 3%;
+	width: 90px;
+	height: 70px;
+}
+
+.formContainerPrincipal a{
+	font-size: 20px;
+}

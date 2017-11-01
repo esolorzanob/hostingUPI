@@ -1,0 +1,31 @@
+<html>
+    
+    <head>
+    <title>Mi primera pagina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/thony.css">
+    </head>
+    
+    <body>
+    <h1>Esta pagina es chiva!</h1>
+    <p>Mis grupos favoritos</p>
+    <div class="formContainerPrincipal">
+    <h1 id="titulo">Ingreso al sistema</h1>
+    <form onsubmit="return login()">
+         <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-default">Login</button>
+        <a href="registroUsuario.html">Registrarse</a>
+    </form>
+    <p id="mensaje"></p>
+    </div>
+    </body>
+    
+    </html>
