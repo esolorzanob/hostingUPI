@@ -13,6 +13,7 @@ Apartir de aqui es en la consola del servidor
    mysql -u root -p
    create user 'root'@'%' identified by '<password>';
    grant all privileges on *.* to 'root'@'%';
+   exit;
 7.1 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 	buscar la linea que dice bind-address 127.0.0.0 y ponerle un # adelante
 	sudo /etc/init.d/mysql restart
