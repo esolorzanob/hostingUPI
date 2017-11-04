@@ -1,4 +1,7 @@
-h1 {
-    color: red;
+titulo {
+	margin-top: 50%;
+    background-color: orange;
+
     text-align: center;
 }
+
